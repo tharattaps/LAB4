@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-glass py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-stars text-warning"></i> PORTFOLIO
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section bg-sunny-yellow text-center text-lg-start">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <span class="badge bg-white text-dark bg-opacity-75 mb-3 px-3 py-2 rounded-pill">
+                        👋 Hello, everone!
+                    </span>
+                    <h1 class="display-3 fw-bold mb-3 text-shadow-sm">
+                        Hi, I'm Sen <br>
+                        <span class="fs-2 fw-normal d-block mt-2">Design & Developer student</span>
+                    </h1>
+                    <p class="lead mb-4 opacity-90">
+                        Welcome to web application
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <button class="btn btn-outline-light rounded-pill px-4 py-2">
+                            my work
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0 text-center">
+                    <img src="Avatar.jpg" 
+                         alt="Profile" class="profile-img rounded-circle">
+                </div>
+
+            </div>
+        </div>
+
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" style="position: relative; display: block; width: calc(100% + 1.3px); height: 60px; fill: #ffffff;">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+
+    </header>
+
+<div class="main-container">
+
+    <div class="display-box">
+        <p>🌼 Result (x 10) 🌼</p>
+        <span class="result-text">
+            {{ resultValue !== null ? resultValue : 'Enter a number' }}
+        </span>
+    </div>
+
+    <hr>
+
+    <div class="input-area">
+        <label for="anyInput">Input Value:</label>
+        
+        <input 
+            type="text" 
+            id="anyInput" 
+            placeholder="Type your number here"
+            (input)="updateInputValue($event)"
+        >
+        
+        <button (click)="calculateAndDisplay()" class="btn btn-success"> Calculate </button>
+    </div>
+
+</div>

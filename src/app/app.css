@@ -1,0 +1,120 @@
+ิ        body { font-family: 'Prompt', sans-serif; }
+
+        /* --- 1. Navbar (Glassmorphism) --- */
+        .navbar-glass {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .navbar-brand { font-weight: 700; color: #333; }
+        .nav-link { color: #555; font-weight: 500; transition: 0.3s; }
+        .nav-link:hover { color: #000; transform: translateY(-2px); }
+
+        /* --- 2. Hero Section Base --- */
+        .hero-section {
+            padding: 120px 0 100px 0;
+            position: relative;
+            overflow: hidden;
+            color: white; /* สีตัวอักษรหลัก */
+        }
+
+        /* +++++ โซนเลือกสี (Color Themes) +++++ */
+
+        /* ธีม A: สีฟ้าสดใส (Fresh Blue) */
+        .bg-fresh-blue {
+            /* ไล่สีจากฟ้าอ่อนมาก -> ฟ้าทะเล */
+            background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+        }
+        
+        /* ธีม B: สีเหลืองสดใส (Sunny Yellow) */
+        .bg-sunny-yellow {
+            /* ไล่สีจากเหลืองพาสเทล -> ส้มพีช (เพื่อให้ตัวหนังสือขาวอ่านออก) */
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+        }
+
+        /* ------------------------------------ */
+
+        /* รูปโปรไฟล์ */
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 6px solid rgba(255,255,255,0.6);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            animation: float 6s ease-in-out infinite; /* เอฟเฟกต์ลอยเบาๆ */
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* ปุ่มกด */
+        .btn-white {
+            background: white;
+            color: #333;
+            border: none;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-white:hover {
+            background: #f1f1f1;
+            color: #000;
+            transform: translateY(-2px);
+        }
+        
+        /* ตัวหนังสือเงามัวๆ ให้อ่านง่ายขึ้นบนพื้นสว่าง */
+        .text-shadow-sm {
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* คูน10 */
+        .main-container {
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Bright Color Display Box */
+.display-box {
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    background: linear-gradient(120deg, #ff6b6b 0%, #ffe66d 100%); 
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.display-box p {
+    margin: 0 0 5px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.result-text {
+    display: block;
+    font-size: 2em;
+    font-weight: 800;
+    color: #fff; 
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
